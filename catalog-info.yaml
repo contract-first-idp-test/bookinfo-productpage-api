@@ -1,0 +1,24 @@
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: "productpage"
+  title: "productpage"
+  description: "Product Page API"
+  annotations:
+    backstage.io/spectral-ruleset-url: https://raw.githubusercontent.com/bookinfo/spectral-rules/main/ruleset.yaml
+  links:
+    - url: https://registry-apicurio-registry.apps.cluster-zpqtb.zpqtb.sandbox2275.opentlc.com/ui/artifacts/com.redhat.demo.bookinfo/productpage/versions/latest
+      title: Apicurio Registry
+      icon: web
+    - url: https://microcks-microcks.apps.cluster-zpqtb.zpqtb.sandbox2275.opentlc.com/#/services?name=productpage
+      title: Microcks
+    - url: https://microcks-microcks.apps.cluster-zpqtb.zpqtb.sandbox2275.opentlc.com/rest/productpage/v1
+      title: Mock
+      icon: web
+spec:
+  type: openapi
+  system: system:default/bookinfo
+  owner: group:default/backstage-admins
+  lifecycle: production
+  definition:
+    $openapi: https://github.com/contract-first-idp-test/bookinfo-productpage-api/blob/main/specification.yaml

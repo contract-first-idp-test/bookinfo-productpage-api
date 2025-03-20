@@ -1,0 +1,10 @@
+openapi: 3.0.3
+info:
+  title: productpage
+  description: |-
+    Product Page API
+  version: 'v1'
+servers:
+  - url: "http://localhost:8080"
+  - url: "https://microcks-microcks.apps.cluster-zpqtb.zpqtb.sandbox2275.opentlc.com/rest/productpage/v1"
+paths: {}
